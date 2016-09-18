@@ -1,0 +1,18 @@
+[
+	{
+	    "id": 1,
+	    "name": "Aera",
+	    "type": "town",
+	    "camps": 0,
+	    "connected_locs": [2, 3, 4, 5, 6, 7],
+	    "link": ""
+	},
+	{
+		"id": 2,
+	    "name": "House",
+	    "type": "town",
+	    "camps": 0,
+	    "connected_locs": [1],
+	    "link": "asdf"
+	}
+]
