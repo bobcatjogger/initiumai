@@ -4,22 +4,30 @@ Created on Sep 17, 2016
 
 @author: jacob
 '''
-
 import argparse
-from logging import getLogger
-from iai import log
-from iai import initium_ai
+import logging
+
+from iai import web_driver
+from iai import character
 
 
 def main(wd):
-    log.setup_log('./logs/iai')
-    l = getLogger('aia_log')
-    l.info('Starting Main')
-    l.debug('debug test')
-    l.error('testing errors')
+    # logging
+    setup_log()
+    l = logging.getLogger('iai')
+    l.info('*** Started AIA ***')
 
-    ai1 = initium_ai.InitiumAI(wd)
+    # open up the browser and log in
+    wd = web_driver.WebDriver()
 
+    # create a char
+    c = character.Character(wd)
+
+    # report status and location
+
+    # start main loop
+    l.info('*** All Done ***')
+'''
     while True:
         # wait for user input
         usr_in = input("Accepting commands: ")
@@ -39,6 +47,37 @@ def main(wd):
             ai1.status()
         else:
             l.debug('Unknown command: {}'.format(usr_in))
+'''
+
+
+def setup_log():
+    # create logger with 'spam_application'
+    logger = logging.getLogger('iai')
+    logger.setLevel(logging.DEBUG)
+
+    # create file handler which logs even debug messages
+    fh = logging.FileHandler('./logs/info.log')
+    fh.setLevel(logging.INFO)
+
+    # create file handler which logs even debug messages
+    dfh = logging.FileHandler('./logs/debug.log')
+    dfh.setLevel(logging.DEBUG)
+
+    # create console handler with a higher log level
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+
+    # create formatter and add it to the handlers
+    fmt = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    formatter = logging.Formatter(fmt)
+    fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
+    dfh.setFormatter(formatter)
+
+    # add the handlers to the logger
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+    logger.addHandler(dfh)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
