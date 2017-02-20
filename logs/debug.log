@@ -1,0 +1,13 @@
+2016-09-23 16:08:59,036 - iai - INFO - *** Started AIA ***
+2016-09-23 16:09:08,382 - iai - INFO - *** All Done ***
+2016-09-23 16:09:42,004 - iai - INFO - *** Started AIA ***
+2016-09-23 16:09:45,399 - iai - DEBUG - WD chrome started
+2016-09-23 16:09:48,001 - iai - DEBUG - Launched main site
+2016-09-23 16:09:48,057 - iai - DEBUG - Hit login
+2016-09-23 16:09:48,197 - iai - DEBUG - Email entered
+2016-09-23 16:09:48,294 - iai - DEBUG - Pass entered
+2016-09-23 16:09:50,334 - iai - DEBUG - Logging in
+2016-09-23 16:09:50,335 - iai - DEBUG - url: http://127.0.0.1:62145 | session_id: 180ac08df4d09518653474f0ca8ca972
+2016-09-23 16:09:50,335 - iai - INFO - *** All Done ***
+2016-10-06 09:02:15,118 - iai - INFO - *** Started AIA ***
+2016-10-06 09:02:18,780 - iai - DEBUG - WD chrome started
